@@ -1,8 +1,5 @@
 package Jour02;
-/*Des dés a 6 faces avec les valeurs suivantes : 1 , 2 , 3 , 4 , 5 et 6.
-Créer un programme qui affiche toutes les combinaisons
-possibles si trois des sont lancées ainsi que le nombre total de
-combinaisons possibles. */
+
 public class Dice_Combinaison {
   public static void main(String[] args) {
     int[] dice = {1,2,3,4,5,6};
