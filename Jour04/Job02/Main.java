@@ -23,17 +23,22 @@ public class Main extends Thread{
         } catch (IOException e) {
             e.printStackTrace();
         }
-        long startTime = System.nanoTime();
+        
         //déclaration de 4 threads
         Thread thread1 = new Thread(new Random(length));
         
-        //démarrage des threads
+        long startTime = System.nanoTime();
+        //démarrage du threads
         thread1.start();
+
+        
         
         //attente de la fin des threads
 
         try {
             thread1.join();
+         
+            
             
             
         } catch (InterruptedException e){
@@ -42,9 +47,9 @@ public class Main extends Thread{
        
 
         double endTime = (double) System.nanoTime();
-        double executionTime = (endTime - startTime) / 1_000_000;
+        double executionTime = (endTime - startTime) / 1000000;
 
         // Affiche le temps d'exécution
-        System.out.println("Temps d'exécution : " + executionTime + " millisecondes.");
+        System.out.println("Temps d'exécution : " + executionTime + " ms.");
     }
 }
